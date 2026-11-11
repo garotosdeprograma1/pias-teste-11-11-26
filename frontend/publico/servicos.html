@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Busque e contrate profissionais verificados no DaFix. Eletricistas, encanadores, programadores, designers e mais de 3.000 especialistas disponíveis." />
+  <meta name="theme-color" content="#203b30" />
+  <title>Busca de Serviços — DaFix</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/publico/css/publico.css" />
+  <link rel="stylesheet" href="/assets/css/data-states.css">
+  <link rel="stylesheet" href="/assets/css/motion.css">
+</head>
+<body data-page="servicos">
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+  <header class="header scrolled" id="header" role="banner">
+    <a href="/" class="header-brand" aria-label="DaFix — Página inicial">
+      <img src="/assets/images/logo.png" alt="" class="brand-icon" width="38" height="38" aria-hidden="true">
+      <span class="brand-name">Da<span>Fix</span></span>
+    </a>
+    <nav class="header-nav" role="navigation" aria-label="Menu principal">
+      <a href="/" class="nav-link">Início</a>
+      <a href="/publico/servicos.html" class="nav-link is-active">Serviços</a>
+      <a href="/publico/institucional.html" class="nav-link">Sobre Nós</a>
+      <a href="/publico/institucional.html#contato" class="nav-link">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <a href="/index.html" class="btn btn--ghost btn--sm">Entrar</a>
+      <a href="/index.html?tab=signup" class="btn btn--primary btn--sm ripple">Cadastrar</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menu mobile">
+    <a href="/" class="nav-link">Início</a>
+    <a href="/publico/servicos.html" class="nav-link is-active">Serviços</a>
+    <a href="/publico/institucional.html" class="nav-link">Sobre Nós</a>
+    <a href="/publico/institucional.html#contato" class="nav-link">Contato</a>
+    <div class="mobile-menu-actions">
+      <a href="/index.html" class="btn btn--ghost btn--full">Entrar</a>
+      <a href="/index.html?tab=signup" class="btn btn--primary btn--full">Cadastrar grátis</a>
+    </div>
+  </div>
+
+  <section class="search-hero" aria-label="Busca de profissionais">
+    <div class="container">
+      <h1 class="search-hero-title">Encontre o profissional <span style="opacity:.9">certo</span></h1>
+      <p class="search-hero-sub">Consulte os profissionais cadastrados na plataforma.</p>
+      <div class="search-bar" role="search" aria-label="Buscar profissional">
+        <span class="search-bar-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5" stroke-linecap="round"/></svg>
+        </span>
+        <input type="search" id="searchInput" placeholder="Ex: eletricista, programador, pintor..." aria-label="Buscar por especialidade ou nome" autocomplete="off" />
+        <button class="btn btn--primary ripple" id="searchBtn" type="button">Buscar</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="filters-bar" role="search" aria-label="Filtros de busca">
+    <div class="container filters-inner">
+      <select class="filter-select" id="filterCat" aria-label="Filtrar por categoria">
+        <option value="">Todas as categorias</option>
+      </select>
+      <button class="btn btn--ghost btn--sm" id="clearFilters" style="margin-left:auto">Limpar filtros</button>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="results-area">
+      <div class="container">
+        <div class="results-header">
+          <p class="results-count" id="resultsCount">Carregando...</p>
+        </div>
+        <div class="pros-grid" id="prosGrid"></div>
+        <div class="no-results" id="noResults" hidden>
+          <div class="no-results-icon">🔍</div>
+          <h3>Nenhum profissional encontrado</h3>
+          <p>Tente ajustar os filtros ou buscar por outro termo.</p>
+          <button class="btn btn--ghost" id="resetSearch">Limpar busca</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ATUALIZADO ====== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong style="font-size:18px">Dafix</strong>
+          <p class="footer-desc">Serviços para sua casa.</p>
+          <a href="https://www.instagram.com/sys.covich?srtk=Yjdlc2VwdHMwY3I3" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Dafix (@sys.covich)" title="@sys.covich no Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#833ab4 0%,#fd1d1d 55%,#fcb045 100%);color:#fff;text-decoration:none;margin-top:6px;box-shadow:0 4px 12px rgba(253,29,29,.25)">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <div class="footer-links" style="font-size:13px;line-height:1.9">
+            <span>📍 Av. Paulista, 1578 — Bela Vista, São Paulo/SP · 01310-200</span>
+            <span>📞 (11) 98765-4321</span>
+            <a href="mailto:contato@dafix.com.br">✉️ contato@dafix.com.br</a>
+            <span>🏢 CNPJ 12.345.678/0001-90</span>
+            <span>🕒 Seg–Sex · 8h às 18h</span>
+          </div>
+        </div>
+        <div>
+          <h4>Redes sociais</h4>
+          <div class="footer-links" style="font-size:13px;line-height:1.9">
+            <a href="https://www.instagram.com/sys.covich?srtk=Yjdlc2VwdHMwY3I3" target="_blank" rel="noopener noreferrer">📸 @sys.covich</a>
+            <a href="/index.html">Entrar ou cadastrar</a>
+            <a href="/suporte/index.html">Central de ajuda</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© <span id="year"></span> DaFix · Todos os direitos reservados · CNPJ 12.345.678/0001-90</p>
+        <div class="footer-legal">
+          <a href="https://www.instagram.com/sys.covich?srtk=Yjdlc2VwdHMwY3I3" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Instagram
+          </a>
+          <span>Privacidade</span>
+          <span>Termos</span>
+          <span>Cookies</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="/publico/js/publico.js" defer></script>
+  <script src="/assets/js/data-source.js"></script>
+  <script src="/assets/js/public-records.js"></script>
+</body>
+</html>
