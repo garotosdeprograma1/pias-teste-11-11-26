@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#203b30">
+  <meta name="description" content="DaFix – A plataforma mais segura para contratar profissionais qualificados para serviços residenciais, manutenção predial, reformas e instalações.">
+  <meta name="keywords" content="serviços residenciais, eletricista, encanador, pintor, manutenção, reformas, profissionais, DaFix">
+  <meta property="og:title" content="DaFix – Contrate profissionais qualificados">
+  <meta property="og:description" content="Encontre eletricistas, encanadores, pintores e especialistas em poucos minutos com garantia e segurança.">
+  <meta property="og:image" content="/assets/og-image.jpg">
+  <title>DaFix – Profissionais para sua casa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/landing.css">
+  <link rel="stylesheet" href="/assets/css/data-states.css">
+<link rel="stylesheet" href="/assets/css/motion.css">
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- ====== HEADER ====== -->
+  <header class="lp-header" id="lp-header" role="banner">
+    <div class="header-left">
+      <a href="/landing.html" class="logo" aria-label="DaFix – página inicial">
+        <img src="/assets/images/logo.png" alt="" class="logo__icon" width="40" height="40" aria-hidden="true">
+        Da<span>Fix</span>
+      </a>
+      <nav class="nav-menu" role="navigation" aria-label="Menu principal">
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#profissionais">Profissionais</a>
+        <a href="#como-funciona">Como Funciona</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="/suporte/contato.html">Contato</a>
+      </nav>
+    </div>
+    <div class="header-right">
+      <button class="btn-icon" id="theme-toggle" aria-label="Alternar tema escuro/claro">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <a href="/index.html" class="btn btn--ghost btn--sm" aria-label="Entrar na plataforma">Entrar</a>
+      <a href="#solicitar" class="btn btn--primary btn--sm" aria-label="Solicitar um serviço">Solicitar Serviço</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+  <nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile" aria-hidden="true">
+    <button class="mobile-close" id="mobile-close" aria-label="Fechar menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="#inicio" class="mobile-link">Início</a>
+    <a href="#servicos" class="mobile-link">Serviços</a>
+    <a href="#profissionais" class="mobile-link">Profissionais</a>
+    <a href="#como-funciona" class="mobile-link">Como Funciona</a>
+    <a href="#diferenciais" class="mobile-link">Diferenciais</a>
+    <a href="#avaliacoes" class="mobile-link">Avaliações</a>
+    <a href="/suporte/contato.html" class="mobile-link">Contato</a>
+    <a href="/index.html" class="btn btn--ghost" style="margin-top:16px">Entrar</a>
+    <a href="#solicitar" class="btn btn--primary">Solicitar Serviço</a>
+  </nav>
+
+  <!-- ====== MAIN ====== -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero-section" id="inicio" aria-label="Seção principal">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <span class="hero-eyebrow">Dafix · Cuidado para sua casa</span>
+          <h1 class="hero-headline">Sua casa em <em>boas mãos.</em></h1>
+          <p class="hero-sub">Do pequeno reparo à próxima reforma. Encontre quem entende do assunto e organize os cuidados com a sua casa em um só lugar.</p>
+          <div class="hero-cta">
+            <a href="#solicitar" class="btn btn--primary btn--lg" aria-label="Solicitar serviço agora">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+              Encontrar um profissional
+            </a>
+            <a href="#como-funciona" class="btn btn--ghost btn--lg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              Como funciona
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="home-board">
+            <div class="home-board__heading"><span>O cuidado está nos detalhes.</span><span aria-hidden="true">01 / 03</span></div>
+            <svg class="home-drawing" viewBox="0 0 420 230" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração de uma casa com jardim">
+              <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M36 208h348M96 206V98l106-69 106 69v108M76 111l126-82 126 82M273 73V42h23v46"/>
+                <path d="M180 206v-76h48v76M189 166h2M121 118h35v39h-35zM138 118v39M121 137h35M252 118h31v39h-31zM267 118v39M252 137h31M170 98h64M202 67v31"/>
+                <path d="M323 207v-67M323 177c-28-3-37-23-28-41 16 0 29 13 28 41ZM323 162c1-23 18-38 34-33 5 19-11 32-34 33ZM62 208v-39M62 189c-18-2-24-14-18-27 11 1 19 10 18 27ZM62 179c2-17 14-26 25-23 4 13-8 23-25 23Z"/>
+                <path d="M182 208l-15 21M227 208l15 21" stroke-dasharray="3 5"/>
+              </g>
+              <circle cx="348" cy="48" r="16" fill="#b95d43"/>
+            </svg>
+            <div class="home-board__caption">Pequenos reparos.<br><em>Grandes diferenças.</em></div>
+            <div class="home-board__services" aria-label="Explore os serviços">
+              <a href="#servicos"><span>Elétrica</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a>
+              <a href="#servicos"><span>Hidráulica</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a>
+              <a href="#servicos"><span>Pintura</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS -->
+    <section class="section section--alt" id="metricas" aria-label="Métricas da plataforma"><div class="container"><div class="section-head"><h2>Registros da plataforma</h2></div><div id="landingStats" class="data-summary"><p class="data-empty">Carregando…</p></div></div></section>
+
+    <!-- SERVICES -->
+    <section class="section" id="servicos" aria-label="Nossos serviços"><div class="container"><div class="section-head"><h2>Serviços cadastrados</h2></div><div id="landingServices" class="data-catalog"><p class="data-empty">Carregando…</p></div></div></section>
+
+    <!-- PROFESSIONALS -->
+    <section class="section" id="profissionais" aria-label="Profissionais em destaque"><div class="container"><div class="section-head"><h2>Profissionais cadastrados</h2></div><div id="landingProfessionals" class="data-catalog"><p class="data-empty">Carregando…</p></div></div></section>
+
+    <section class="section section--alt" id="como-funciona" aria-label="Como funciona"><div class="container"><div class="section-head"><h2>Como usar a Dafix</h2></div><div class="steps"><div class="step"><span class="step-num">1</span><div><h3>Crie sua conta</h3><p>Escolha o perfil de cliente ou funcionário e faça seu cadastro.</p></div></div><div class="step"><span class="step-num">2</span><div><h3>Consulte o catálogo</h3><p>Veja os serviços e as especialidades cadastrados.</p></div></div><div class="step"><span class="step-num">3</span><div><h3>Acompanhe seus registros</h3><p>Entre na sua conta para consultar o perfil e os pedidos vinculados a você.</p></div></div></div></div></section>
+
+    <!-- DIFFERENTIALS -->
+    <section class="section section--alt" id="diferenciais" aria-label="Nossos diferenciais"><div class="container"><div class="section-head"><h2>Seu acesso organizado</h2><p>Consulte o catálogo, encontre profissionais pela especialidade e acompanhe os pedidos da sua conta.</p></div></div></section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" id="avaliacoes" aria-label="Avaliações de clientes"><div class="container"><h2>Avaliações de clientes</h2><p class="data-empty">Nenhuma avaliação publicada.</p></div></section>
+
+    <!-- APP SECTION -->
+
+
+    <!-- FAQ -->
+    <section class="section section--alt" id="faq" aria-label="Perguntas frequentes">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="section-label">FAQ</div>
+          <h2 class="section-title">Perguntas Frequentes</h2>
+          <p class="section-sub">Tire suas principais dúvidas sobre a plataforma DaFix.</p>
+        </div>
+        <div class="faq-list reveal" role="list">
+          <div class="faq-item" role="listitem"><button class="faq-question" type="button" aria-expanded="false">Como criar uma conta?</button><div class="faq-answer"><div class="faq-answer-inner">Na tela de acesso, escolha Cliente ou Funcionário e preencha o formulário de cadastro.</div></div></div>
+          <div class="faq-item" role="listitem"><button class="faq-question" type="button" aria-expanded="false">Por que meus pedidos estão vazios?</button><div class="faq-answer"><div class="faq-answer-inner">A lista mostra somente pedidos cadastrados para a sua conta. Se ainda não houver registros, ela ficará vazia.</div></div></div>
+          <div class="faq-item" role="listitem"><button class="faq-question" type="button" aria-expanded="false">Como atualizar meu perfil?</button><div class="faq-answer"><div class="faq-answer-inner">Entre na sua conta e abra Perfil. As edições feitas nessa tela ficam salvas neste navegador.</div></div></div>
+          <div class="faq-item" role="listitem"><button class="faq-question" type="button" aria-expanded="false">Como sair da conta?</button><div class="faq-answer"><div class="faq-answer-inner">Use Sair da conta no menu ou no cabeçalho. Você será direcionado à tela de login.</div></div></div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-section" id="solicitar" aria-label="Solicitar serviço agora">
+      <div class="cta-inner">
+        <h2 class="cta-title">Precisa de ajuda hoje?</h2>
+        <p class="cta-sub">Crie sua conta e consulte os serviços cadastrados.</p>
+        <div class="cta-btns">
+          <a href="/index.html" class="btn btn--white btn--lg" aria-label="Solicitar serviço agora">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            Solicitar Serviço
+          </a>
+          <a href="/suporte/contato.html" class="btn btn--outline-white btn--lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 013 .82h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            Entrar em Contato
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="lp-footer" id="contato" role="contentinfo" aria-label="Rodapé do site">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/landing.html" class="logo" aria-label="DaFix">
+            <img src="/assets/images/logo.png" alt="" class="logo__icon" width="40" height="40" aria-hidden="true">
+            Da<span>Fix</span>
+          </a>
+          <p class="footer-brand-desc">A plataforma mais segura e confiável para contratar profissionais qualificados para sua casa.</p>
+          <div class="footer-social" aria-label="Redes sociais">
+
+
+
+
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Empresa</div>
+          <nav class="footer-links" aria-label="Links da empresa">
+            <a href="/publico/institucional.html">Sobre nós</a>
+            <span>Blog</span>
+            <span>Carreiras</span>
+            <span>Imprensa</span>
+            <span>Parceiros</span>
+          </nav>
+        </div>
+        <div>
+          <div class="footer-col-title">Serviços</div>
+          <nav class="footer-links" aria-label="Categorias de serviços">
+            <a href="#servicos">Elétrica</a>
+            <a href="#servicos">Hidráulica</a>
+            <a href="#servicos">Pintura</a>
+            <a href="#servicos">Reformas</a>
+            <a href="#servicos">Ver todos</a>
+          </nav>
+          <div class="footer-col-title" style="margin-top:24px">Suporte</div>
+          <nav class="footer-links" aria-label="Links de suporte">
+            <a href="/suporte/index.html">Central de Ajuda</a>
+            <a href="#faq">FAQ</a>
+            <a href="/suporte/contato.html">Contato</a>
+            <span>Termos de Uso</span>
+            <span>Privacidade</span>
+          </nav>
+        </div>
+        <div>
+          <div class="footer-col-title">Contato</div>
+          <div class="footer-links" style="gap:14px">
+            <div class="footer-contact-item">Canal de contato ainda não informado.</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 DaFix. Todos os direitos reservados.</p>
+        <nav class="footer-legal" aria-label="Links legais">
+          <span>Privacidade</span>
+          <span>Termos</span>
+          <span>Cookies</span>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/landing.js"></script>
+
+<script src="/assets/js/data-source.js"></script>
+<script src="/assets/js/public-records.js"></script>
+</body>
+</html>

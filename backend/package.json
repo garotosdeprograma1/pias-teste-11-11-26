@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "approve": "^0.0.12",
+    "script": "^0.1.4",
+    "scripts": "^0.1.0",
+    "sqlite3": "^6.0.1"
+  }
+}

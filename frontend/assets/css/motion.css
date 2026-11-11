@@ -1,0 +1,16 @@
+/* Movimento compartilhado: entradas curtas, sem animar dimensões da página. */
+:root{--motion-ease:cubic-bezier(.22,1,.36,1)}
+.scroll-progress{width:100%;transform:scaleX(0);transform-origin:left;transition:none}
+.content,.view.is-active,.tab-panel{animation-duration:.28s;animation-timing-function:var(--motion-ease);animation-fill-mode:backwards}
+.stagger > *{animation-duration:.28s;animation-delay:0s!important}
+.reveal,.reveal-left,.reveal-right,.reveal-scale{transition-delay:0s!important}
+.dropdown,.modal__dialog,.modal-dialog{transition-timing-function:var(--motion-ease)}
+dialog[open]{animation:dafix-dialog-in .22s var(--motion-ease)}
+dialog[open]::backdrop{animation:dafix-backdrop-in .2s ease}
+@keyframes dafix-dialog-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes dafix-backdrop-in{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  html:focus-within,html{scroll-behavior:auto!important}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important;scroll-behavior:auto!important}
+  .reveal,.reveal-left,.reveal-right,.reveal-scale{opacity:1;transform:none}
+}
